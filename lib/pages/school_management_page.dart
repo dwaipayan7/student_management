@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_management/core/colors.dart';
+import 'package:student_management/pages/calender.dart';
 
 import 'home_page.dart';
 
@@ -15,7 +16,7 @@ class _SchoolManagementPageState extends State<SchoolManagementPage> {
     HomePage(),
     Scaffold(),
     Scaffold(),
-    Scaffold(),
+    Calendar(),
     Scaffold(),
   ];
 
