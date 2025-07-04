@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_management/core/colors.dart';
+import 'package:student_management/model/task_model.dart';
 
 class Calendar extends StatelessWidget {
   const Calendar({super.key});
@@ -86,6 +87,46 @@ class Calendar extends StatelessWidget {
                       CalendarItem(weekDay: "Thu", date: 5, isActive: false),
                       CalendarItem(weekDay: "Fri", date: 6, isActive: false),
                     ],
+                  ),
+                ),
+
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      // crossAxisAlignment: CrossAxisAlignment.start,
+                      children: List.generate(tasks.length, (index) {
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 25),
+
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.orangeAccent,
+                                      borderRadius: BorderRadius.horizontal(
+                                        right: Radius.circular(15),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 15,),
+                                  SizedBox(
+                                    width: size.width / 1.15,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+
+                                      ]
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        );
+                      }),
+                    ),
                   ),
                 ),
               ],
